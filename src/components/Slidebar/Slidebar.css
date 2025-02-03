@@ -1,0 +1,73 @@
+.slidebar {
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #282a2c;
+    padding: 20px 15px;
+}
+
+
+.slidebar .menu {
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+}
+
+.slidebar .new-chat {
+    margin-top: 50px;
+    display: inline-flex;
+    background-color: #202123;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    color: gray;
+    cursor: pointer;
+}
+
+.newChatText {
+    font-size: 20px;
+}
+
+.slidebar .recent {
+    display: flex;
+    flex-direction: column;
+}
+
+.slidebar .recent-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.slidebar .recent-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.slidebar .recent-entry:hover {
+    background-color: #202123;
+}
+
+.slidebar .bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.PlusIcon {
+    font-size: 35px;
+    color: gray;
+}
+
+.MessageIcon {
+    font-size: 30px;
+    color: gray;
+}
