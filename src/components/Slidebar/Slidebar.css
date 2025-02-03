@@ -1,3 +1,7 @@
+/* font-family: "Nunito", serif; */
+/* font-family: "Montserrat", serif; */
+
+
 .slidebar {
     min-height: 100vh;
     display: inline-flex;
@@ -5,8 +9,11 @@
     justify-content: space-between;
     background-color: #282a2c;
     padding: 20px 15px;
-}
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-family: "Nunito", serif;
 
+}
 
 .slidebar .menu {
     display: block;
@@ -41,6 +48,8 @@
 .slidebar .recent-title {
     margin-top: 30px;
     margin-bottom: 20px;
+    font-size: 16px;
+    color: aliceblue;
 }
 
 .slidebar .recent-entry {
