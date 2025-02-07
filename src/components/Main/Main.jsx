@@ -84,7 +84,11 @@ const Main = () => {
             <div>
               <LuImagePlus className="icons" />
               <IoMdMic className="icons" />
-              <IoMdSend className="icons" onClick={() => onSent()} />
+              {input.length > 0 ? (
+                <IoMdSend className="icons" onClick={() => onSent()} />
+              ) : (
+                ""
+              )}
             </div>
           </div>
           <p className="info">
