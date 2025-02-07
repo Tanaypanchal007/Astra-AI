@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Main.css";
 import { assets } from "../../assets/assets";
 import { IoMdMic } from "react-icons/io";
@@ -17,33 +17,49 @@ const Main = () => {
     setInput,
   } = useContext(Context);
 
+  const [name, setName] = useState("");
+
+  useEffect(() => {
+    // Check if name exists in localStorage
+    const storedName = localStorage.getItem("userName");
+
+    if (storedName) {
+      setName(storedName); // If exists, set it in state
+    } else {
+      // Ask for name if not found
+      const userName = prompt("Hello! What's your name?");
+      if (userName) {
+        setName(userName);
+        localStorage.setItem("userName", userName); // Store name in localStorage
+      } else {
+        setName("Guest"); // Fallback if user cancels
+      }
+    }
+  }, []);
+
   return (
     <div className="main">
       <div className="nav">
-        <p>Gemini</p>
-        <img src={assets.user_icon} alt="" />
+        <p>Astra AI</p>
+        <img src={assets.user_icon} alt="User Icon" />
       </div>
 
       <div className="mainContainer">
         {!showResult ? (
-          <>
-            <div className="greet">
-              <p>
-                <span>Hello,Tanay</span>
-              </p>
-              <p>How can i help you today?</p>
-            </div>
-          </>
+          <div className="greet">
+            <p>
+              <span>Helloo,{name}</span>
+            </p>
+            <p>How can I help you today?</p>
+          </div>
         ) : (
           <div className="result">
-            {/* Title now shows as soon as showResult is true */}
             <div className="resultTitle">
-              <img src={assets.user_icon} alt="" />
+              <img src={assets.user_icon} alt="User Icon" />
               <p>{input || recentPrompt}</p>
             </div>
-            {/* Separate container for loading/response */}
             <div className="resultData">
-              <img src={assets.gemini_icon} alt="" />
+              <img src={assets.gemini_icon} alt="Gemini Icon" />
               {loading ? (
                 <div className="loader">
                   <hr />
@@ -61,7 +77,7 @@ const Main = () => {
           <div className="serachBox">
             <input
               type="text"
-              placeholder="Enter a prompt here.."
+              placeholder="Enter a prompt here..."
               onChange={(e) => setInput(e.target.value)}
               value={input}
             />
@@ -73,7 +89,7 @@ const Main = () => {
           </div>
           <p className="info">
             Gemini may display inaccurate info, including about people, so
-            double-check its responses. Your privacy and Gemini Apps
+            double-check its responses. Your privacy and Gemini Apps.
           </p>
         </div>
       </div>
