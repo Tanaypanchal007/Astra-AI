@@ -1,0 +1,94 @@
+/* font-family: "Nunito", serif; */
+/* font-family: "Montserrat", serif; */
+
+.main {
+    flex: 1;
+    min-height: 90vh;
+    padding-bottom: 15vh;
+    position: relative;
+}
+
+.main .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: white;
+    font-family: "Nunito", serif;
+}
+
+.main .nav Img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.mainContainer {
+    max-width: 900px;
+    margin: auto;
+}
+
+.main .greet {
+    margin-top: 50px;
+}
+
+.main .greet span {
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main .greet p {
+    font-size: 50px;
+    font-family: "Nunito", serif;
+    color: white;
+    font-weight: 500;
+}
+
+
+.mainBottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+    font-family: "Montserrat", serif;
+}
+
+.serachBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid #4a5050;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.serachBox .icons {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 7px;
+    color: #a2a9b0;
+}
+
+.serachBox input {
+    background-color: transparent;
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 8px;
+    color: #a2a9b0;
+}
+
+.mainBottom .info {
+    margin: 15px auto;
+    text-align: center;
+    font-size: 13px;
+    color: white;
+    font-weight: 300;
+}
