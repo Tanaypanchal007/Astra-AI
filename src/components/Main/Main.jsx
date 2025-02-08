@@ -56,7 +56,7 @@ const Main = () => {
           <div className="result">
             <div className="resultTitle">
               <img src={assets.user_icon} alt="User Icon" />
-              <p>{input || recentPrompt}</p>
+              <p>{recentPrompt}</p>
             </div>
             <div className="resultData">
               <img src={assets.gemini_icon} alt="Gemini Icon" />

@@ -22,13 +22,14 @@
     font-size: 35px;
 }
 
+
 .slidebar .new-chat {
-    margin-top: 50px;
+    margin-top: 30px;
     display: inline-flex;
     background-color: #202123;
     align-items: center;
     gap: 10px;
-    padding: 15px 15px;
+    padding: 13px 15px;
     border-radius: 50px;
     font-size: 14px;
     color: gray;
@@ -36,12 +37,18 @@
 }
 
 .newChatText {
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .slidebar .recent {
     display: flex;
     flex-direction: column;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.slidebar .recent::-webkit-scrollbar {
+    display: none;
 }
 
 .slidebar .recent-title {
@@ -59,6 +66,7 @@
     border-radius: 50px;
     color: white;
     cursor: pointer;
+    font-size: 15px;
 }
 
 .slidebar .recent-entry:hover {
@@ -71,11 +79,11 @@
 }
 
 .PlusIcon {
-    font-size: 35px;
+    font-size: 25px;
     color: gray;
 }
 
 .MessageIcon {
-    font-size: 30px;
+    font-size: 25px;
     color: gray;
 }
